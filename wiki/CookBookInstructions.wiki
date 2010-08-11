@@ -1,0 +1,25 @@
+#summary Get started with the Kettle Cookbook
+
+= Get the cookbook =
+
+You can either download file kettle-cookbook.zip or extract the code from the Subversion source repository.
+
+= Usage =
+
+Kettle Cookbook works by running a standard PDI 4.x job with Kitchen.
+Suppose you extracted the Cookbook files in folder: /parking/kettle-cookbook
+
+From your PDI distribution run the job called *pdi/document-all.kjb*, for example like this:
+
+{{{
+sh kitchen.sh -file:/parking/kettle-cookbook/pdi/document-all.kjb -param:"INPUT_DIR"=/project/dwh/kettle/ -param:"OUTPUT_DIR"=/tmp/output
+}}}
+
+As you can see there are 2 parameters that you can use...
+
+ * *INPUT_DIR* : the location of your source transformations (.ktr) and jobs (.kjbà
+ * *OUTPUT_DIR* : the folder where you want to store the documentation results.
+
+That's all there is to it.
+
+Enjoy the Kettle Cookbook!
