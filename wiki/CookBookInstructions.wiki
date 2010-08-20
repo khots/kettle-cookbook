@@ -9,7 +9,11 @@ You can either download file kettle-cookbook.zip or extract the code from the Su
 Kettle Cookbook works by running a standard PDI 4.x job with Kitchen.
 Suppose you extracted the Cookbook files in folder: /parking/kettle-cookbook
 
-From your PDI distribution run the job called *pdi/document-all.kjb*. The job expects two parameters: INPUT_DIR, and OUTPUT_DIR.
+From your PDI distribution run the job called *pdi/document-all.kjb*. The job expects two parameters: 
+ * *INPUT_DIR* : the location of your source transformations (.ktr) and jobs (.kjb)
+ * *OUTPUT_DIR* : the folder where you want to store the documentation results.
+
+If you run Kettle-cookbook using Kettle 4 (or higher), the contents of the INPUT_DIR will be examined recursively. It has been reported that running it with kettle 3.2 will only scan the INPUT_DIR itself, not its subdirectories. 
 
 If you run the job in spoon, you should provide values for the parameters in the grid at the left side of the launch dialog. 
  
@@ -21,11 +25,6 @@ sh kitchen.sh -file:/parking/kettle-cookbook/pdi/document-all.kjb -param:"INPUT_
 
 Please note that Windows users should use quotes around the entire parameter/value pair. 
 For more information on using parameters see [[http://wiki.pentaho.com/display/EAI/Named Parameters]]
-
-As you can see there are 2 parameters that you can use...
-
- * *INPUT_DIR* : the location of your source transformations (.ktr) and jobs (.kjbà
- * *OUTPUT_DIR* : the folder where you want to store the documentation results.
 
 That's all there is to it.
 
