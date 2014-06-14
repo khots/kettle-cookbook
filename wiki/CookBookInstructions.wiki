@@ -9,7 +9,7 @@ You can either download file kettle-cookbook.zip or extract the code from the Su
 Kettle Cookbook works by running a standard PDI 4.x job with Kitchen.
 Suppose you extracted the Cookbook files in folder: /parking/kettle-cookbook
 
-From your PDI distribution run the job called *pdi/document-all.kjb*. The job expects two parameters: 
+From your PDI distribution run the job called *pdi/document-folder.kjb*. The job expects two parameters: 
  * *INPUT_DIR* : the location of your source transformations (.ktr) and jobs (.kjb)
  * *OUTPUT_DIR* : the folder where you want to store the documentation results.
 
@@ -20,7 +20,7 @@ If you run the job in spoon, you should provide values for the parameters in the
 To run the job from the commandline, cd into the kettle home directory, and use a command line like this:
 
 {{{
-sh kitchen.sh -file:/parking/kettle-cookbook/pdi/document-all.kjb -param:"INPUT_DIR"=/project/dwh/kettle/ -param:"OUTPUT_DIR"=/tmp/output
+sh kitchen.sh -file:/parking/kettle-cookbook/pdi/document-folder.kjb -param:"INPUT_DIR"=/project/dwh/kettle/ -param:"OUTPUT_DIR"=/tmp/output
 }}}
 
 Please note that Kettle 4.0.0 has a bug that prevents you from using parameters on the linux command line. See: http://jira.pentaho.com/browse/PDI-4219. Download 4.0.1 or higher to fix this issue.
